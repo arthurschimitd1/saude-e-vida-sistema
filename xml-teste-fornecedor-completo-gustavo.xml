@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+    <infNFe Id="NFe25260711222333000181550010000009021000009020" versao="4.00">
+      <ide>
+        <cUF>25</cUF>
+        <cNF>00000902</cNF>
+        <natOp>COMPRA PARA TESTE DE ESTOQUE</natOp>
+        <mod>55</mod>
+        <serie>1</serie>
+        <nNF>902</nNF>
+        <dhEmi>2026-07-29T18:30:00-03:00</dhEmi>
+        <tpNF>1</tpNF>
+        <idDest>1</idDest>
+        <cMunFG>2507507</cMunFG>
+        <tpImp>1</tpImp>
+        <tpEmis>1</tpEmis>
+        <cDV>0</cDV>
+        <tpAmb>2</tpAmb>
+        <finNFe>1</finNFe>
+        <indFinal>0</indFinal>
+        <indPres>9</indPres>
+        <procEmi>0</procEmi>
+        <verProc>LUCRO-MAIS-TESTE-1.0</verProc>
+      </ide>
+      <emit>
+        <CNPJ>11222333000181</CNPJ>
+        <xNome>DISTRIBUIDORA MODELO NORDESTE LTDA</xNome>
+        <xFant>MODELO DISTRIBUIDORA</xFant>
+        <enderEmit>
+          <xLgr>Avenida das Industrias</xLgr>
+          <nro>850</nro>
+          <xCpl>Galpao 4, Portao B</xCpl>
+          <xBairro>Distrito Industrial</xBairro>
+          <cMun>2507507</cMun>
+          <xMun>Joao Pessoa</xMun>
+          <UF>PB</UF>
+          <CEP>58082500</CEP>
+          <cPais>1058</cPais>
+          <xPais>Brasil</xPais>
+          <fone>8332345678</fone>
+        </enderEmit>
+        <IE>161234567</IE>
+        <CRT>3</CRT>
+        <email>comercial@distribuidoramodelo.test</email>
+      </emit>
+      <dest>
+        <CPF>00000000191</CPF>
+        <xNome>GUSTAVO TESTE - DOCUMENTO SEM VALOR FISCAL</xNome>
+        <indIEDest>9</indIEDest>
+      </dest>
+      <det nItem="1">
+        <prod>
+          <cProd>MODELO-CAFE-500</cProd>
+          <cEAN>SEM GTIN</cEAN>
+          <xProd>CAFE TORRADO PREMIUM 500G</xProd>
+          <NCM>09012100</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>8.0000</qCom>
+          <vUnCom>13.9000</vUnCom>
+          <vProd>111.20</vProd>
+          <cEANTrib>SEM GTIN</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>8.0000</qTrib>
+          <vUnTrib>13.9000</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <ICMS>
+            <ICMS00>
+              <orig>0</orig>
+              <CST>00</CST>
+              <modBC>3</modBC>
+              <vBC>111.20</vBC>
+              <pICMS>18.00</pICMS>
+              <vICMS>20.02</vICMS>
+            </ICMS00>
+          </ICMS>
+        </imposto>
+      </det>
+      <det nItem="2">
+        <prod>
+          <cProd>MODELO-LEITE-1L</cProd>
+          <cEAN>SEM GTIN</cEAN>
+          <xProd>LEITE INTEGRAL UHT 1L</xProd>
+          <NCM>04012010</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>12.0000</qCom>
+          <vUnCom>5.2500</vUnCom>
+          <vProd>63.00</vProd>
+          <cEANTrib>SEM GTIN</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>12.0000</qTrib>
+          <vUnTrib>5.2500</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <ICMS>
+            <ICMS00>
+              <orig>0</orig>
+              <CST>00</CST>
+              <modBC>3</modBC>
+              <vBC>63.00</vBC>
+              <pICMS>18.00</pICMS>
+              <vICMS>11.34</vICMS>
+            </ICMS00>
+          </ICMS>
+        </imposto>
+      </det>
+      <total>
+        <ICMSTot>
+          <vBC>174.20</vBC>
+          <vICMS>31.36</vICMS>
+          <vProd>174.20</vProd>
+          <vFrete>0.00</vFrete>
+          <vSeg>0.00</vSeg>
+          <vDesc>0.00</vDesc>
+          <vOutro>0.00</vOutro>
+          <vNF>174.20</vNF>
+        </ICMSTot>
+      </total>
+      <transp>
+        <modFrete>9</modFrete>
+      </transp>
+      <pag>
+        <detPag>
+          <tPag>90</tPag>
+          <vPag>0.00</vPag>
+        </detPag>
+      </pag>
+      <infAdic>
+        <infCpl>DOCUMENTO FICTICIO EM AMBIENTE DE HOMOLOGACAO, CRIADO EXCLUSIVAMENTE PARA TESTAR A SUGESTAO DE FORNECEDORES NO LUCRO MAIS. SEM VALOR FISCAL.</infCpl>
+      </infAdic>
+    </infNFe>
+  </NFe>
+  <protNFe versao="4.00">
+    <infProt>
+      <tpAmb>2</tpAmb>
+      <verAplic>LUCRO-MAIS-TESTE</verAplic>
+      <chNFe>25260711222333000181550010000009021000009020</chNFe>
+      <dhRecbto>2026-07-29T18:30:01-03:00</dhRecbto>
+      <nProt>TESTE-SEM-PROTOCOLO-FISCAL</nProt>
+      <cStat>100</cStat>
+      <xMotivo>Autorizado apenas para teste interno ficticio</xMotivo>
+    </infProt>
+  </protNFe>
+</nfeProc>

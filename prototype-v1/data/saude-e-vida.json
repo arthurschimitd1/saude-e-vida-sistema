@@ -1,0 +1,339 @@
+{
+  "version": 2,
+  "company": {
+    "id": 1,
+    "name": "Saúde e Vida",
+    "tradeName": "Saúde e Vida",
+    "segment": "Produtos naturais e bem-estar"
+  },
+  "user": {
+    "id": 1,
+    "name": "Admin",
+    "email": "admin@saudeevida.com",
+    "role": "Administrador",
+    "status": "ativo"
+  },
+  "shifts": [],
+  "products": [
+    {
+      "id": 1,
+      "name": "Chá verde com limão",
+      "code": "SV-001",
+      "category": "Chás e infusões",
+      "unit": "UN",
+      "stock": 34,
+      "min": 12,
+      "price": 24.9,
+      "cost": 11.5,
+      "supplierId": 1,
+      "infinite": false
+    },
+    {
+      "id": 2,
+      "name": "Granola artesanal 500g",
+      "code": "SV-002",
+      "category": "Alimentos naturais",
+      "unit": "UN",
+      "stock": 8,
+      "min": 10,
+      "price": 29.9,
+      "cost": 14.2,
+      "supplierId": 1,
+      "infinite": false
+    },
+    {
+      "id": 3,
+      "name": "Pasta de amendoim integral",
+      "code": "SV-003",
+      "category": "Alimentos naturais",
+      "unit": "UN",
+      "stock": 21,
+      "min": 8,
+      "price": 21.5,
+      "cost": 9.8,
+      "supplierId": 2,
+      "infinite": false
+    },
+    {
+      "id": 4,
+      "name": "Blend Energia da Manhã",
+      "code": "SV-004",
+      "category": "Suplementos",
+      "unit": "UN",
+      "stock": 17,
+      "min": 7,
+      "price": 48.9,
+      "cost": 25.3,
+      "supplierId": 2,
+      "infinite": false
+    },
+    {
+      "id": 5,
+      "name": "Óleo essencial de lavanda",
+      "code": "SV-005",
+      "category": "Bem-estar",
+      "unit": "UN",
+      "stock": 4,
+      "min": 6,
+      "price": 36.9,
+      "cost": 16.4,
+      "supplierId": 2,
+      "infinite": false
+    },
+    {
+      "id": 6,
+      "name": "Mix de castanhas 250g",
+      "code": "SV-006",
+      "category": "Alimentos naturais",
+      "unit": "UN",
+      "stock": 26,
+      "min": 10,
+      "price": 32.9,
+      "cost": 17.9,
+      "supplierId": 1,
+      "infinite": false
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "name": "Mariana Alves",
+      "phone": "(85) 99921-3211",
+      "email": "mariana@email.com",
+      "cpf": "",
+      "address": ""
+    },
+    {
+      "id": 2,
+      "name": "Rafael Nogueira",
+      "phone": "(85) 98840-1180",
+      "email": "rafael@email.com",
+      "cpf": "",
+      "address": ""
+    },
+    {
+      "id": 3,
+      "name": "Camila Freitas",
+      "phone": "(85) 99731-0452",
+      "email": "camila@email.com",
+      "cpf": "",
+      "address": ""
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "Verde Campo Distribuidora",
+      "contact": "contato@verdecampo.com",
+      "phone": "(85) 3221-0042",
+      "document": ""
+    },
+    {
+      "id": 2,
+      "name": "Raízes do Brasil",
+      "contact": "comercial@raizes.com",
+      "phone": "(11) 4020-8844",
+      "document": ""
+    }
+  ],
+  "sales": [
+    {
+      "id": 2058,
+      "clientId": 1,
+      "client": "Mariana Alves",
+      "employeeId": 1,
+      "items": [
+        {
+          "productId": 6,
+          "name": "Mix de castanhas 250g",
+          "quantity": 2,
+          "unitPrice": 32.9,
+          "total": 65.8
+        }
+      ],
+      "subtotal": 65.8,
+      "discount": 0,
+      "deliveryFee": 0,
+      "total": 65.8,
+      "payments": [
+        {
+          "method": "PIX",
+          "amount": 65.8
+        }
+      ],
+      "status": "finalizada",
+      "shiftId": null,
+      "date": "2026-10-08",
+      "createdAt": "2026-10-08T12:10:25.895Z"
+    },
+    {
+      "id": 2057,
+      "clientId": 2,
+      "client": "Rafael Nogueira",
+      "employeeId": 1,
+      "items": [
+        {
+          "productId": 4,
+          "name": "Blend Energia da Manhã",
+          "quantity": 1,
+          "unitPrice": 48.9,
+          "total": 48.9
+        }
+      ],
+      "subtotal": 48.9,
+      "discount": 0,
+      "deliveryFee": 0,
+      "total": 48.9,
+      "payments": [
+        {
+          "method": "CARTAO",
+          "cardType": "credito",
+          "installments": 1,
+          "amount": 48.9
+        }
+      ],
+      "status": "finalizada",
+      "shiftId": null,
+      "date": "2026-10-08",
+      "createdAt": "2026-10-08T12:10:25.896Z"
+    }
+  ],
+  "movements": [
+    {
+      "id": 1,
+      "productId": 6,
+      "product": "Mix de castanhas 250g",
+      "type": "saida",
+      "quantity": 2,
+      "reason": "Venda #2058",
+      "originType": "venda",
+      "originId": 2058,
+      "date": "2026-10-08"
+    },
+    {
+      "id": 2,
+      "productId": 1,
+      "product": "Chá verde com limão",
+      "type": "entrada",
+      "quantity": 24,
+      "reason": "Recebimento do pedido PED-0103",
+      "originType": "pedido",
+      "originId": 103,
+      "date": "2026-10-05"
+    }
+  ],
+  "orders": [
+    {
+      "id": 104,
+      "number": "PED-0104",
+      "supplierId": 1,
+      "supplier": "Verde Campo Distribuidora",
+      "status": "pendente",
+      "orderDate": "2026-10-08",
+      "expectedDate": "2026-10-08",
+      "notes": "",
+      "items": [
+        {
+          "productId": 2,
+          "product": "Granola artesanal 500g",
+          "quantity": 30,
+          "unitPrice": 14.2,
+          "total": 426
+        }
+      ],
+      "total": 426,
+      "financialControl": true,
+      "paid": 0,
+      "financialStatus": "nao_pago"
+    },
+    {
+      "id": 103,
+      "number": "PED-0103",
+      "supplierId": 2,
+      "supplier": "Raízes do Brasil",
+      "status": "recebido",
+      "orderDate": "2026-10-03",
+      "expectedDate": "2026-10-05",
+      "notes": "",
+      "items": [
+        {
+          "productId": 1,
+          "product": "Chá verde com limão",
+          "quantity": 24,
+          "unitPrice": 11.5,
+          "total": 276
+        }
+      ],
+      "total": 276,
+      "financialControl": true,
+      "paid": 276,
+      "financialStatus": "quitado"
+    }
+  ],
+  "orderPayments": [],
+  "cashEntries": [
+    {
+      "id": 1,
+      "type": "entrada",
+      "originType": "venda",
+      "originId": 2058,
+      "description": "Venda #2058",
+      "amount": 65.8,
+      "method": "PIX",
+      "date": "2026-10-08",
+      "shiftId": null
+    },
+    {
+      "id": 2,
+      "type": "entrada",
+      "originType": "venda",
+      "originId": 2057,
+      "description": "Venda #2057",
+      "amount": 48.9,
+      "method": "CARTAO",
+      "date": "2026-10-08",
+      "shiftId": null
+    }
+  ],
+  "expenses": [
+    {
+      "id": 1,
+      "type": "saida",
+      "category": "Operacional",
+      "description": "Compra de embalagens",
+      "amount": 380,
+      "status": "pago",
+      "method": "PIX",
+      "date": "2026-10-06"
+    }
+  ],
+  "receivables": [
+    {
+      "id": 1,
+      "clientId": 1,
+      "client": "Mariana Alves",
+      "saleId": null,
+      "origin": "MANUAL",
+      "description": "Venda parcelada",
+      "amount": 120.5,
+      "paidAmount": 0,
+      "issueDate": "2026-10-08",
+      "dueDate": "2026-10-15",
+      "status": "ABERTA"
+    }
+  ],
+  "budgets": [
+    {
+      "id": 1,
+      "clientId": 3,
+      "client": "Camila Freitas",
+      "description": "Kit Bem-estar",
+      "amount": 179.9,
+      "status": "EM_ANALISE",
+      "date": "2026-10-07"
+    }
+  ],
+  "appointments": [],
+  "production": [],
+  "next": 3000
+}

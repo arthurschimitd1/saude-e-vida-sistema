@@ -1,0 +1,10 @@
+{
+  "watch": ["src"],
+  "ext": "js,json",
+  "ignore": ["node_modules"],
+  "legacyWatch": true,
+  "delay": 500,
+  "events": {
+    "restart": "lsof -ti:3001 | xargs kill -9 2>/dev/null || true"
+  }
+}

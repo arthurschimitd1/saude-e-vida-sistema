@@ -1,34 +1,28 @@
-import type { Metadata, Viewport } from 'next';
-import './globals.css';
+'use client';
+import { LayoutProvider } from '../layout/context/layoutcontext';
+import { PrimeReactProvider } from 'primereact/api';
+import 'primereact/resources/primereact.css';
+import 'primeflex/primeflex.css';
+import 'primeicons/primeicons.css';
+import '../styles/layout/layout.scss';
+import '../styles/demo/Demos.scss';
 
-export const metadata: Metadata = {
-  title: 'Cave — uma tarefa de cada vez',
-  description: 'Organize seu tempo, construa sua evolução.',
-  manifest: '/manifest.webmanifest',
-  icons: {
-    icon: [{ url: '/icon-512.png', type: 'image/png', sizes: '512x512' }],
-    apple: [{ url: '/icon-192.png', type: 'image/png', sizes: '192x192' }],
-  },
-  appleWebApp: {
-    capable: true,
-    title: 'Cave',
-    statusBarStyle: 'black-translucent',
-  },
-};
+interface RootLayoutProps {
+    children: React.ReactNode;
+}
 
-export const viewport: Viewport = {
-  themeColor: '#101014',
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-  viewportFit: 'cover',
-};
-
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="pt-BR">
-      <body>{children}</body>
-    </html>
-  );
+export default function RootLayout({ children }: RootLayoutProps) {
+    return (
+        <html lang="en" suppressHydrationWarning>
+            <head>
+                <link id="theme-css" href={`/themes/lara-light-green/theme.css`} rel="stylesheet"></link>
+                <link rel="icon" type="image/png" href="/images/loja/saude-e-vida-tree.png" />
+            </head>
+            <body>
+                <PrimeReactProvider>
+                    <LayoutProvider>{children}</LayoutProvider>
+                </PrimeReactProvider>
+            </body>
+        </html>
+    );
 }

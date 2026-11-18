@@ -1,0 +1,505 @@
+@media screen and (min-width: 1960px) {
+    .layout-main, .landing-wrapper {
+        width: 1504px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .layout-wrapper {
+        &.layout-overlay {
+            .layout-main-container {
+                margin-left: 0;
+                padding-left: 2rem;
+            }
+
+            .layout-sidebar {
+                transform: translateX(-100%);
+                left: 0;
+                top: 0;
+                height: 100vh;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            &.layout-overlay-active {
+                .layout-sidebar {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        &.layout-static {
+            .layout-main-container {
+                margin-left: 300px;
+            }
+
+            &.layout-static-inactive {
+                .layout-sidebar {
+                    transform: translateX(-100%);
+                    left: 0;
+                }
+
+                .layout-main-container {
+                    margin-left: 0;
+                    padding-left: 2rem;
+                }
+            }
+        }
+
+        .layout-mask {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .blocked-scroll {
+        overflow: hidden;
+    }
+
+    .layout-wrapper {
+        .layout-main-container {
+            margin-left: 0;
+            padding-left: 2rem;
+        }
+
+        .layout-sidebar {
+            transform: translateX(-100%);
+            left: 0;
+            top: 0;
+            height: 100vh;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .layout-mask {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 998;
+            width: 100%;
+            height: 100%;
+            background-color: var(--maskbg);
+        }
+
+        &.layout-mobile-active {
+            .layout-sidebar {
+                transform: translateX(0);
+            }
+
+            .layout-mask {
+                display: block;
+                animation: fadein $transitionDuration;
+            }
+        }
+    }
+}
+
+/* Base mobile layer: visual/layout only, without changing business rules. */
+@media (max-width: 767px) {
+    /* Keep the app inside the device viewport. Wide tables and agendas keep
+       their own horizontal scrollers instead of enlarging the whole page. */
+    html,
+    body {
+        width: 100%;
+        min-width: 320px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .layout-wrapper,
+    .layout-main-container,
+    .layout-main {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .layout-main {
+        overflow-x: hidden;
+    }
+
+    .layout-main .flex > *,
+    .layout-main .grid > * {
+        min-width: 0;
+    }
+
+    /* Prevent iOS/Android browser auto-zoom when a small form control gets
+       focus. This does not disable the user's manual accessibility zoom. */
+    input,
+    select,
+    textarea,
+    .p-inputtext,
+    .p-dropdown,
+    .p-dropdown-label,
+    .p-calendar .p-inputtext,
+    .p-inputnumber-input,
+    .p-inputtextarea,
+    .p-multiselect,
+    .p-multiselect-label,
+    .p-password-input {
+        font-size: 16px !important;
+    }
+
+    .layout-main-container {
+        min-width: 0;
+        padding: 5.25rem .75rem 1rem;
+    }
+
+    .layout-main,
+    .layout-main > *,
+    .layout-main .grid,
+    .layout-main .card,
+    .layout-main .surface-card {
+        min-width: 0;
+    }
+
+    .layout-topbar {
+        height: 4rem;
+        padding: 0 .65rem;
+        gap: .35rem;
+
+        .layout-topbar-logo {
+            min-width: 0;
+            max-width: 42vw;
+            overflow: hidden;
+
+            img {
+                max-width: 100%;
+                height: 2.35rem !important;
+                transform: none !important;
+                object-fit: contain;
+                object-position: left center;
+            }
+        }
+
+        .layout-menu-button,
+        .layout-topbar-menu-button {
+            flex: 0 0 2.75rem;
+            width: 2.75rem;
+            height: 2.75rem;
+        }
+
+        .layout-company-selector {
+            min-width: 0 !important;
+            flex: 1 1 auto;
+            max-width: 48vw;
+            margin-left: 0 !important;
+
+            .p-dropdown-label {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 12px !important;
+    }
+
+    .p-dialog {
+        width: calc(100vw - 1rem) !important;
+        max-width: calc(100vw - 1rem) !important;
+        margin: .5rem;
+
+        .p-dialog-header { padding: 1rem; }
+
+        .p-dialog-content {
+            max-height: calc(100dvh - 10rem);
+            overflow-y: auto;
+            padding: 1rem !important;
+        }
+
+        .p-dialog-footer {
+            padding: .75rem 1rem;
+
+            > div {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .5rem;
+            }
+
+            .p-button { min-height: 2.75rem; }
+        }
+    }
+
+    .p-datatable-wrapper {
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .p-datatable .p-datatable-thead > tr > th,
+    .p-datatable .p-datatable-tbody > tr > td {
+        padding: .65rem .55rem;
+    }
+
+    .p-button { min-height: 2.75rem; }
+
+    .p-button {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .p-inputtext,
+    .p-dropdown,
+    .p-calendar,
+    .p-inputnumber,
+    .p-multiselect { max-width: 100%; }
+
+    .input-page .cash-sale-options,
+    .input-page .cash-payment-row { min-width: 0; }
+
+    .input-page [style*="min-width"] {
+        min-width: 0 !important;
+    }
+
+    .input-page .flex.flex-wrap > div[style*="min-width"] {
+        flex: 1 1 100%;
+    }
+
+    .input-page .cash-sale-options > .field,
+    .input-page .cash-payment-row > div {
+        min-width: 0 !important;
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .input-page .cash-payment-row > .p-button,
+    .input-page .cash-payment-row > button { flex: 0 0 auto; }
+
+    .input-page .cash-history-filters > div {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .input-page .cash-history-filters input,
+    .input-page .cash-history-filters .p-dropdown,
+    .input-page .cash-history-filters .p-calendar { width: 100% !important; }
+
+    .input-page .resumo-venda .justify-content-between {
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+
+    .schedule-page .toolbar {
+        top: 0;
+        align-items: stretch;
+        padding: .75rem;
+    }
+
+    .schedule-page .toolbarGroup,
+    .schedule-page .quickFilters {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .schedule-page .quickFilters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: .25rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .schedule-page .dayAgendaHeaderActions,
+    .schedule-page .dayAgendaSummary {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .schedule-page .dayAgendaScroll {
+        max-height: calc(100dvh - 14rem);
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .schedule-page .dayAgendaColumn { min-width: 180px; }
+
+    .schedule-page .dayAgendaProfessional {
+        padding: 8px 10px;
+        gap: 7px;
+    }
+
+    .finance-page,
+    .nfe-page {
+        min-width: 0;
+        padding: .75rem !important;
+    }
+
+    .finance-page .finance-header-actions,
+    .finance-page .finance-filter-row,
+    .nfe-page .nfe-header,
+    .nfe-page .nfe-filter-row { align-items: stretch; }
+
+    .finance-page .finance-header-actions > .p-button,
+    .finance-page .finance-filter-row > *,
+    .nfe-page .nfe-header > .p-button,
+    .nfe-page .nfe-filter-row > * {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .nfe-page h1 {
+        font-size: 1.55rem !important;
+        line-height: 1.2;
+    }
+
+    .nfe-page .p-datatable { min-width: 720px; }
+
+    /* Stock and production pages: stack actions and filters instead of
+       allowing their desktop widths to enlarge the document viewport. */
+    .stock-page .card,
+    .producao-page .card {
+        overflow: hidden;
+    }
+
+    .stock-page .card > .flex.justify-content-between,
+    .producao-page .card > .flex.justify-content-between {
+        align-items: stretch;
+        gap: .75rem;
+    }
+
+    .stock-page .card > .flex.justify-content-between > .flex,
+    .producao-page .card > .flex.justify-content-between > .flex {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .stock-page .card > .flex.justify-content-between > .flex > .p-button,
+    .producao-page .card > .flex.justify-content-between > .flex > .p-button {
+        flex: 1 1 calc(50% - .5rem);
+        min-width: 0;
+    }
+
+    .stock-page .card .grid.formgrid > .field,
+    .producao-page .card .flex.flex-wrap.align-items-center > * {
+        min-width: 0;
+    }
+
+    .stock-page .card .grid.formgrid > .col-6 {
+        width: 100%;
+        padding-left: .5rem !important;
+        padding-right: .5rem !important;
+    }
+
+    .stock-page .card .grid.formgrid .flex.gap-2 > .p-inputnumber {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .stock-page .p-datatable-wrapper,
+    .producao-page .p-datatable-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .producao-page .card > .flex.justify-content-between > h5 {
+        flex: 1 1 100%;
+    }
+
+    /* NF-e: keep the toolbar and table inside the page while retaining
+       horizontal scrolling only for the wide data table. */
+    .nfe-page {
+        overflow-x: hidden;
+    }
+
+    .nfe-page .p-toolbar {
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+
+    .nfe-page .p-toolbar .p-toolbar-group-left,
+    .nfe-page .p-toolbar .p-toolbar-group-right {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    /* WhatsApp CRM: the kanban can scroll internally, but the page chrome
+       and filters must remain single-column on a phone. */
+    .message-page {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
+        padding: .75rem !important;
+    }
+
+    .message-page > .flex.align-items-center.justify-content-between {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: .75rem;
+    }
+
+    .message-page > .flex.align-items-center.justify-content-between > .flex {
+        min-width: 0;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .message-page > .flex.align-items-center.justify-content-between > .flex:last-child {
+        width: 100%;
+    }
+
+    .message-page > .flex.align-items-center.justify-content-between > .flex:last-child > div {
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .message-page [style*="gridTemplateColumns"] {
+        min-width: 0 !important;
+    }
+
+    /* Sidebar mobile: narrower shell with a fixed, always-visible logout area. */
+    .layout-wrapper .layout-sidebar {
+        top: 0;
+        left: 0;
+        width: min(86vw, 280px);
+        height: 100dvh;
+        max-height: 100dvh;
+        overflow: hidden;
+        border-radius: 0 14px 14px 0;
+        padding: calc(env(safe-area-inset-top, 0px) + .75rem) .75rem calc(env(safe-area-inset-bottom, 0px) + .75rem);
+    }
+
+    .layout-wrapper .layout-sidebar > .layout-menu {
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-bottom: .5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .layout-wrapper .layout-sidebar .sidebar-logout {
+        flex: 0 0 auto;
+        margin-top: 0;
+        padding: .75rem 0 0;
+        background: linear-gradient(180deg, rgba(21, 128, 61, .78), #16a34a);
+        position: relative;
+        z-index: 2;
+    }
+
+    .layout-wrapper .layout-sidebar .logout-button {
+        min-height: 2.75rem;
+        padding: .7rem .85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .layout-topbar .layout-topbar-logo { max-width: 34vw; }
+    .layout-topbar .layout-company-selector { max-width: 44vw; }
+
+    .p-dialog .p-dialog-footer .p-button { flex: 1 1 100%; }
+
+    .input-page .cash-page-actions > .p-button,
+    .input-page .cash-shortcuts > .p-button { flex: 1 1 100%; }
+}

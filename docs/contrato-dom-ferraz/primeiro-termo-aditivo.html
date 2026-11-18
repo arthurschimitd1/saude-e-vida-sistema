@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Primeiro Termo Aditivo — Dom Ferraz e Lucro+</title>
+  <style>
+    @page { size:A4; margin:0; }
+    * { box-sizing:border-box; }
+    :root { --navy:#0b2857; --blue:#2478e8; --light:#eef5ff; --ink:#17253a; --muted:#56657a; --line:#d9e2ee; --gold:#d8a323; }
+    html,body { margin:0; background:#dfe6ef; font-family:Arial,Helvetica,sans-serif; color:var(--ink); }
+    .page { width:210mm; height:297mm; margin:0 auto; background:#fff; position:relative; overflow:hidden; page-break-after:always; }
+    .page:last-child { page-break-after:auto; }
+    .bar { height:4mm; background:linear-gradient(90deg,var(--blue),var(--navy) 75%,var(--gold)); }
+    .content { padding:14mm 18mm 20mm; }
+    .head { display:flex; justify-content:space-between; align-items:center; padding-bottom:7mm; border-bottom:1px solid var(--line); }
+    .logo { width:42mm; height:auto; }
+    .doc-id { text-align:right; font-size:8.5px; line-height:1.45; color:var(--muted); text-transform:uppercase; letter-spacing:.7px; }
+    .kicker { color:var(--blue); font-size:8.5px; font-weight:800; letter-spacing:1.8px; text-transform:uppercase; margin-top:10mm; }
+    h1 { color:var(--navy); font-size:27px; line-height:1.12; letter-spacing:-.5px; margin:3mm 0 4mm; }
+    h2 { color:var(--navy); font-size:17px; line-height:1.2; margin:7mm 0 3.5mm; }
+    h3 { color:var(--navy); font-size:12px; margin:0 0 2mm; }
+    p, li { font-size:10.2px; line-height:1.52; color:var(--ink); text-align:justify; }
+    p { margin:0 0 3.1mm; }
+    ol, ul { margin:2mm 0 3.5mm 5mm; padding-left:5mm; }
+    li { margin-bottom:2mm; }
+    strong { color:var(--navy); }
+    .summary { display:grid; grid-template-columns:1fr 1fr; gap:4mm; margin-top:8mm; }
+    .card { border:1px solid var(--line); border-radius:3mm; padding:5mm; min-height:29mm; }
+    .card span { display:block; color:var(--blue); text-transform:uppercase; letter-spacing:1px; font-size:7.5px; font-weight:800; margin-bottom:2mm; }
+    .card strong { display:block; font-size:14px; line-height:1.2; }
+    .notice { margin:6mm 0; background:var(--light); border-left:3px solid var(--blue); padding:4.5mm 5mm; border-radius:0 2mm 2mm 0; }
+    .notice p { margin:0; font-size:9.5px; }
+    .clause { margin-top:5mm; }
+    .clause-title { display:flex; gap:3mm; align-items:flex-start; margin-bottom:3mm; }
+    .num { flex:0 0 auto; width:8mm; height:8mm; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:800; }
+    .clause-title h2 { margin:1mm 0 0; font-size:15px; text-transform:uppercase; letter-spacing:.2px; }
+    .sub { margin-left:11mm; }
+    table { width:100%; border-collapse:collapse; margin:4mm 0; }
+    th { background:var(--navy); color:#fff; font-size:8.5px; text-align:left; padding:3mm; }
+    td { border-bottom:1px solid var(--line); font-size:9.4px; line-height:1.4; padding:3mm; vertical-align:top; }
+    td:first-child { width:33%; font-weight:700; color:var(--navy); }
+    .money { margin:5mm 0; background:linear-gradient(140deg,var(--navy),#19477f); color:#fff; border-radius:3mm; padding:6mm; display:flex; justify-content:space-between; gap:8mm; align-items:center; }
+    .money p { color:#dbe8f8; margin:0; font-size:9px; }
+    .money strong { color:#fff; font-size:25px; white-space:nowrap; }
+    .warning { background:#fff8e5; border:1px solid #ecd58a; border-radius:3mm; padding:5mm; margin:5mm 0; }
+    .warning p { margin:0; }
+    .footer { position:absolute; left:18mm; right:18mm; bottom:8mm; display:flex; justify-content:space-between; border-top:1px solid var(--line); padding-top:3mm; color:#748196; font-size:7.5px; letter-spacing:.5px; }
+    .signbox { border:1px solid var(--line); border-radius:3mm; padding:6mm; margin-top:7mm; }
+    .sign-grid { display:grid; grid-template-columns:1fr 1fr; gap:12mm; margin-top:15mm; }
+    .signature { border-top:1px solid #718096; padding-top:2.5mm; font-size:8.5px; line-height:1.45; color:var(--muted); min-height:19mm; }
+    .signature strong { font-size:9.5px; }
+    .witnesses { display:grid; grid-template-columns:1fr 1fr; gap:12mm; margin-top:13mm; }
+    .legal-note { font-size:8px; line-height:1.45; color:#68778b; background:#f5f7fa; border-radius:2mm; padding:4mm; margin-top:9mm; }
+    @media print { html,body { background:#fff; } .page { margin:0; } }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div class="bar"></div><div class="content">
+      <div class="head"><img class="logo" src="lucromais-logo.png" alt="Lucro+"><div class="doc-id">Instrumento particular<br>Referência: contrato de 23/07/2026</div></div>
+      <div class="kicker">Primeiro termo aditivo</div>
+      <h1>Contrato de Prestação de Serviços e Licenciamento de Software</h1>
+      <p>Por este instrumento, as partes abaixo qualificadas resolvem alterar e complementar, de comum acordo, o Contrato de Prestação de Serviços e Licenciamento de Software celebrado em <strong>23 de julho de 2026</strong>, mediante as condições deste Primeiro Termo Aditivo.</p>
+
+      <h2>Partes</h2>
+      <p><strong>CONTRATANTE — DOM FERRAZ BARBER SHOP</strong>, pessoa jurídica de direito privado, inscrita no CNPJ sob o nº <strong>48.636.600/0001-77</strong>, com sede na Av. Presidente Epitácio Pessoa, nº 3663, bairro Miramar, João Pessoa/PB, representada por <strong>LIVIA MARIA MONTEIRO DOS SANTOS RODRIGUES</strong>, CPF nº 117.429.484-13, e-mail Barbeariadomferraz03@gmail.com.</p>
+      <p><strong>CONTRATADA — MS DESENVOLVIMENTO E SOLUCOES DIGITAIS LTDA</strong>, pessoa jurídica de direito privado, inscrita no CNPJ sob o nº <strong>53.180.523/0001-23</strong>, com sede na Rua Aprígio Pereira Nepomuceno, nº 125, bairro Jardim Paulistano, Campina Grande/PB, representada por <strong>IAGO EDSON SANTOS LUCENA</strong>, CPF nº 137.164.714-37.</p>
+
+      <div class="summary">
+        <div class="card"><span>Aquisição adicional</span><strong>2 totens personalizados</strong></div>
+        <div class="card"><span>Valor dos totens</span><strong>R$ 5.000,00</strong></div>
+        <div class="card"><span>Prazo máximo</span><strong>19/08/2026</strong></div>
+        <div class="card"><span>Próxima mensalidade</span><strong>05/07/2027</strong></div>
+      </div>
+
+      <div class="notice"><p><strong>Finalidade do aditivo.</strong> Registrar os pagamentos acordados, incorporar ao objeto a aquisição, personalização, instalação e integração de dois totens, disciplinar o prazo de entrega, assegurar a continuidade do suporte e definir o período sem novas cobranças mensais.</p></div>
+      <p>As partes declaram possuir poderes para celebrar este aditivo e reconhecem que suas cláusulas foram livremente negociadas, devendo ser interpretadas segundo a boa-fé, a cooperação e a preservação do equilíbrio contratual.</p>
+    </div><div class="footer"><span>DOM FERRAZ × LUCRO+</span><span>PÁGINA 1 DE 5</span></div>
+  </section>
+
+  <section class="page">
+    <div class="bar"></div><div class="content">
+      <div class="head"><img class="logo" src="lucromais-logo.png" alt="Lucro+"><div class="doc-id">Primeiro termo aditivo<br>Objeto e pagamentos</div></div>
+
+      <div class="clause"><div class="clause-title"><div class="num">1</div><h2>Do objeto adicional — dois totens</h2></div><div class="sub">
+        <p><strong>1.1.</strong> O objeto do contrato original fica acrescido do fornecimento de <strong>02 (dois) totens</strong>, destinados à operação da CONTRATANTE, compreendendo, no preço ajustado: aquisição dos equipamentos, personalização visual, configuração, transporte, instalação física e integração funcional ao Sistema Lucro+.</p>
+        <p><strong>1.2.</strong> Os equipamentos serão destinados às unidades da CONTRATANTE denominadas <strong>Manaíra</strong> e <strong>Miramar</strong>, sendo 01 (um) totem para cada unidade, nos endereços de instalação confirmados por escrito pela CONTRATANTE.</p>
+        <p><strong>1.3.</strong> A instalação será considerada concluída somente quando ambos os totens estiverem fisicamente posicionados nos locais indicados, ligados, configurados e com acesso funcional ao Sistema Lucro+, ressalvadas indisponibilidades externas comprovadamente não imputáveis à CONTRATADA.</p>
+        <p><strong>1.4.</strong> A propriedade dos totens será transferida à CONTRATANTE após a confirmação do pagamento integral de R$ 5.000,00, sem transferência de propriedade intelectual do software, que permanece regido pelo contrato original.</p>
+      </div></div>
+
+      <div class="clause"><div class="clause-title"><div class="num">2</div><h2>Dos valores e do reconhecimento dos pagamentos</h2></div><div class="sub">
+        <p><strong>2.1.</strong> As partes reconhecem o pagamento, pela CONTRATANTE, de <strong>R$ 300,00 (trezentos reais)</strong>, realizado em <strong>27 de julho de 2026</strong>, referente à mensalidade do Plano Pacote 2 do Sistema Lucro+.</p>
+        <p><strong>2.2.</strong> Pela aquisição e implantação dos dois totens descritos na Cláusula 1, a CONTRATANTE pagará à CONTRATADA, em <strong>05 de agosto de 2026</strong>, o valor total e único de <strong>R$ 5.000,00 (cinco mil reais)</strong>.</p>
+        <div class="money"><div><p>Pagamento específico</p><strong>R$ 5.000,00</strong></div><p>2 totens · personalização · transporte · instalação · configuração · integração</p></div>
+        <p><strong>2.3.</strong> O pagamento será realizado por PIX para a chave CNPJ nº 53.180.523/0001-23, de titularidade da CONTRATADA, e será considerado quitado após a confirmação bancária do crédito.</p>
+        <p><strong>2.4.</strong> O valor de R$ 5.000,00 não corresponde a mensalidade de software, antecipação de mensalidades ou taxa recorrente, ficando exclusivamente vinculado às obrigações relativas aos dois totens.</p>
+        <p><strong>2.5.</strong> A CONTRATADA fornecerá comprovante ou recibo de quitação dos R$ 5.000,00 após a confirmação do crédito, sem prejuízo da validade do comprovante bancário da CONTRATANTE.</p>
+      </div></div>
+    </div><div class="footer"><span>DOM FERRAZ × LUCRO+</span><span>PÁGINA 2 DE 5</span></div>
+  </section>
+
+  <section class="page">
+    <div class="bar"></div><div class="content">
+      <div class="head"><img class="logo" src="lucromais-logo.png" alt="Lucro+"><div class="doc-id">Primeiro termo aditivo<br>Mensalidades e suporte</div></div>
+
+      <div class="clause"><div class="clause-title"><div class="num">3</div><h2>Da suspensão das cobranças mensais</h2></div><div class="sub">
+        <p><strong>3.1.</strong> Considerado o pagamento de R$ 300,00 realizado em 27/07/2026 e a condição comercial negociada para o ciclo inicial, <strong>não serão exigidas novas mensalidades da CONTRATANTE entre agosto de 2026 e junho de 2027</strong>.</p>
+        <p><strong>3.2.</strong> A cobrança mensal do Plano Pacote 2 será retomada somente em <strong>05 de julho de 2027</strong>, quando vencerá a primeira mensalidade posterior ao período de suspensão, no valor contratual de R$ 300,00, sujeito apenas aos reajustes que sejam válidos, previamente informados e previstos no contrato original.</p>
+        <div class="warning"><p><strong>Regra de prevalência:</strong> para eliminar qualquer dúvida de contagem, as partes estabelecem que a data certa de retomada da mensalidade — <strong>05/07/2027</strong> — prevalece sobre referências genéricas a “12 meses”. Nenhuma mensalidade intermediária será cobrada antes dessa data.</p></div>
+        <p><strong>3.3.</strong> O período sem novas cobranças mensais constitui condição comercial expressamente pactuada e não caracteriza atraso, inadimplência, mora, desconto condicionado, novação ou renúncia ao contrato.</p>
+        <p><strong>3.4.</strong> Durante esse período, ficam afastadas, exclusivamente quanto às mensalidades suspensas, as disposições de mora, multa, juros, bloqueio de acesso, suspensão do sistema e rescisão por falta de pagamento previstas nas Cláusulas 3.2, 3.3 e 3.4 do contrato original.</p>
+      </div></div>
+
+      <div class="clause"><div class="clause-title"><div class="num">4</div><h2>Da manutenção do acesso e do suporte</h2></div><div class="sub">
+        <p><strong>4.1.</strong> O Sistema Lucro+ permanecerá ativo durante todo o período sem novas cobranças, mantendo-se os acessos e as funcionalidades do Plano Pacote 2 previstos no contrato original.</p>
+        <p><strong>4.2.</strong> A CONTRATADA manterá o suporte técnico básico por meio eletrônico, incluindo esclarecimento de dúvidas operacionais, correção de falhas diretamente relacionadas ao sistema, atualizações corretivas e apoio razoável à integração dos totens.</p>
+        <p><strong>4.3.</strong> A suspensão das cobranças mensais não autoriza redução do suporte contratado, bloqueio de credenciais ou limitação das funcionalidades por motivo financeiro relacionado ao período de suspensão.</p>
+        <p><strong>4.4.</strong> Permanecem aplicáveis as exclusões técnicas da Cláusula 5.2 do contrato original para problemas causados por energia elétrica, conexão com a internet, rede local, equipamentos de terceiros ou uso inadequado, sem prejuízo da obrigação específica de instalação e integração dos totens assumida neste aditivo.</p>
+      </div></div>
+
+      <table><tr><th colspan="2">CRONOGRAMA FINANCEIRO CONSOLIDADO</th></tr><tr><td>27/07/2026</td><td>R$ 300,00 — mensalidade já paga</td></tr><tr><td>05/08/2026</td><td>R$ 5.000,00 — pagamento dos dois totens</td></tr><tr><td>Ago/2026 a Jun/2027</td><td>Sem novas cobranças mensais</td></tr><tr><td>05/07/2027</td><td>Retomada da mensalidade do sistema</td></tr></table>
+    </div><div class="footer"><span>DOM FERRAZ × LUCRO+</span><span>PÁGINA 3 DE 5</span></div>
+  </section>
+
+  <section class="page">
+    <div class="bar"></div><div class="content">
+      <div class="head"><img class="logo" src="lucromais-logo.png" alt="Lucro+"><div class="doc-id">Primeiro termo aditivo<br>Instalação e garantias</div></div>
+
+      <div class="clause"><div class="clause-title"><div class="num">5</div><h2>Do prazo e das condições de instalação</h2></div><div class="sub">
+        <p><strong>5.1.</strong> A CONTRATADA se obriga a concluir a instalação e a integração dos dois totens nos estabelecimentos indicados pela CONTRATANTE <strong>até 19 de agosto de 2026</strong>, inclusive.</p>
+        <p><strong>5.2.</strong> Caberá à CONTRATADA coordenar a logística, levar os equipamentos aos locais indicados, realizar a instalação, a configuração e os testes necessários à integração com o Sistema Lucro+.</p>
+        <p><strong>5.3.</strong> Caberá à CONTRATANTE assegurar, nas datas combinadas, acesso aos locais, presença de responsável autorizado, pontos de energia adequados, conexão de internet funcional e as informações necessárias à configuração.</p>
+        <p><strong>5.4.</strong> O prazo somente poderá ser prorrogado: (i) por acordo escrito entre as partes; (ii) por caso fortuito ou força maior devidamente comprovado; ou (iii) por impedimento causado exclusivamente pela CONTRATANTE. Nas hipóteses (ii) e (iii), a CONTRATADA deverá comunicar o fato por escrito, apresentar a evidência disponível e informar imediatamente nova data objetiva para conclusão.</p>
+        <p><strong>5.5.</strong> A conclusão será documentada por termo de instalação, mensagem eletrônica, relatório técnico ou outro registro escrito que identifique a data, a unidade, o equipamento instalado e o resultado do teste funcional.</p>
+      </div></div>
+
+      <div class="clause"><div class="clause-title"><div class="num">6</div><h2>Do inadimplemento e da restituição integral</h2></div><div class="sub">
+        <p><strong>6.1.</strong> Se, por fato imputável à CONTRATADA, os dois totens não estiverem integralmente instalados e integrados até 19/08/2026, a CONTRATANTE poderá, mediante comunicação escrita, resolver a contratação específica dos totens e exigir a <strong>restituição integral de R$ 5.000,00</strong>.</p>
+        <p><strong>6.2.</strong> A restituição deverá ser realizada em até <strong>10 (dez) dias corridos</strong>, contados do recebimento da comunicação, por PIX ou transferência para conta indicada pela CONTRATANTE, sem retenção de taxa, custo operacional, multa ou compensação.</p>
+        <p><strong>6.3.</strong> O prazo de restituição será considerado cumprido com a efetiva disponibilização do valor integral na conta indicada. O atraso sujeitará a CONTRATADA à correção monetária pelo IPCA/IBGE desde o primeiro dia posterior ao prazo, juros moratórios de 1% ao mês pro rata die e multa moratória de 2% sobre o valor devido.</p>
+        <p><strong>6.4.</strong> A restituição dos R$ 5.000,00 não encerra automaticamente o licenciamento do Sistema Lucro+, que continuará regido pelo contrato original e por este aditivo, inclusive quanto ao suporte e à data de retomada da mensalidade, salvo acordo escrito diverso.</p>
+        <p><strong>6.5.</strong> Se a CONTRATANTE optar por aceitar nova data de instalação em vez da restituição, essa opção deverá constar por escrito e não será presumida pelo silêncio, por tolerância ou por utilização temporária de apenas um dos equipamentos.</p>
+      </div></div>
+
+      <div class="notice"><p><strong>Segurança documental.</strong> Comunicações sobre impedimento, prorrogação, instalação, pedido de restituição e pagamento deverão ocorrer por e-mail, mensagem eletrônica ou plataforma que permita comprovar remetente, destinatário, data e conteúdo.</p></div>
+    </div><div class="footer"><span>DOM FERRAZ × LUCRO+</span><span>PÁGINA 4 DE 5</span></div>
+  </section>
+
+  <section class="page">
+    <div class="bar"></div><div class="content">
+      <div class="head"><img class="logo" src="lucromais-logo.png" alt="Lucro+"><div class="doc-id">Primeiro termo aditivo<br>Ratificação e assinaturas</div></div>
+
+      <div class="clause"><div class="clause-title"><div class="num">7</div><h2>Da prevalência e da ratificação</h2></div><div class="sub">
+        <p><strong>7.1.</strong> Este aditivo integra o contrato original para todos os fins. Em caso de divergência, prevalecerão as disposições deste aditivo exclusivamente quanto aos pagamentos aqui reconhecidos, aos dois totens, ao prazo de instalação, à restituição, à suspensão das cobranças, à continuidade do suporte e à data de retomada da mensalidade.</p>
+        <p><strong>7.2.</strong> Permanecem ratificadas e em pleno vigor todas as demais cláusulas do contrato original que não tenham sido expressamente alteradas por este instrumento, inclusive as relativas ao Plano Pacote 2, proteção de dados, propriedade intelectual e foro.</p>
+        <p><strong>7.3.</strong> Este aditivo produz efeitos a partir de 05/08/2026, sem prejuízo do reconhecimento do pagamento de R$ 300,00 efetuado em 27/07/2026.</p>
+        <p><strong>7.4.</strong> O documento poderá ser assinado física ou eletronicamente pelas partes, em vias de igual teor, sendo recomendada a assinatura por duas testemunhas para reforço da segurança e da exigibilidade documental.</p>
+      </div></div>
+
+      <p style="margin-top:8mm">E, por estarem justas e acordadas, as partes assinam o presente Primeiro Termo Aditivo.</p>
+      <p style="text-align:right;margin-top:6mm"><strong>João Pessoa/PB, 05 de agosto de 2026.</strong></p>
+
+      <div class="signbox">
+        <div class="kicker" style="margin-top:0">Assinaturas das partes</div>
+        <div class="sign-grid">
+          <div class="signature"><strong>DOM FERRAZ BARBER SHOP</strong><br>Livia Maria Monteiro dos Santos Rodrigues<br>CONTRATANTE</div>
+          <div class="signature"><strong>MS DESENVOLVIMENTO E SOLUCOES DIGITAIS LTDA</strong><br>Iago Edson Santos Lucena<br>CONTRATADA</div>
+        </div>
+      </div>
+
+      <div class="kicker" style="margin-top:10mm">Testemunhas</div>
+      <div class="witnesses">
+        <div class="signature"><strong>TESTEMUNHA 1</strong><br>Nome:<br>CPF:</div>
+        <div class="signature"><strong>TESTEMUNHA 2</strong><br>Nome:<br>CPF:</div>
+      </div>
+
+      <div class="legal-note">Este documento foi organizado a partir das condições informadas pelas partes e deve ser conferido antes da assinatura, especialmente quanto às datas, aos comprovantes de pagamento e aos endereços de instalação. Recomenda-se revisão jurídica independente para adequação ao caso concreto.</div>
+    </div><div class="footer"><span>DOM FERRAZ × LUCRO+</span><span>PÁGINA 5 DE 5</span></div>
+  </section>
+</body>
+</html>

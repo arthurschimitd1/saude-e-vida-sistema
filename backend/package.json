@@ -1,21 +1,53 @@
 {
-  "name": "@cave/backend",
+  "name": "backend",
   "version": "1.0.0",
-  "private": true,
-  "description": "Domain API, persistence and notification services for Cave.",
+  "type": "module",
   "scripts": {
-    "check": "tsc --noEmit"
+    "dev": "nodemon src/server.js",
+    "test": "node --test test/*.test.js",
+    "test:producao-estoque": "node scripts/test-producao-estoque.js",
+    "test:estoque-completo": "node scripts/test-estoque-completo.js",
+    "test:caixa-sem-fiscal": "node scripts/test-caixa-sem-fiscal.js",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:migrate:undo": "npx sequelize-cli db:migrate:undo",
+    "db:migrate:status": "npx sequelize-cli db:migrate:status",
+    "db:migration:create": "npx sequelize-cli migration:generate"
   },
   "dependencies": {
-    "@upstash/qstash": "^2.12.0",
-    "next": "14.2.35",
-    "pg": "^8.23.1",
-    "web-push": "^3.6.7"
+    "@whiskeysockets/baileys": "^7.0.0-rc13",
+    "archiver": "^8.0.0",
+    "axios": "^1.16.0",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "bull": "^4.16.5",
+    "cloudinary": "^2.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "exceljs": "^4.4.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.5.2",
+    "express-validator": "^7.2.1",
+    "fast-xml-parser": "^5.10.1",
+    "form-data": "^4.0.5",
+    "google-auth-library": "^10.9.0",
+    "helmet": "^8.2.0",
+    "ioredis": "^5.10.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.2.0",
+    "node-cron": "^4.2.1",
+    "pdfkit": "^0.19.1",
+    "pg": "^8.11.3",
+    "pino": "^10.3.1",
+    "puppeteer": "^25.3.0",
+    "qrcode": "^1.5.4",
+    "resend": "^6.17.2",
+    "sequelize": "^6.37.7",
+    "streamifier": "^0.1.1",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
-    "@types/node": "20.16.10",
-    "@types/pg": "^8.23.1",
-    "@types/web-push": "^3.6.4",
-    "typescript": "5.6.2"
+    "nodemon": "^3.1.10",
+    "sequelize-cli": "^6.6.5"
   }
 }

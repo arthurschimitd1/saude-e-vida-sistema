@@ -1,60 +1,83 @@
-# Cave
+# Saúde e Vida
 
-Aplicativo de produtividade pessoal pensado para celular, tablet e navegador. O Cave reúne rotinas, planejamento, estudos, relógios de foco e recursos de comunidade em uma experiência PWA de visual escuro e responsivo.
+Sistema de gestão comercial da Saúde e Vida, com operação de caixa, estoque, clientes, financeiro, pedidos e uma lojinha virtual integrada ao estoque.
 
-## Visão do produto
+## O que o sistema faz
 
-O objetivo é transformar intenção em consistência: o usuário organiza os blocos do dia, acompanha sessões de foco, planeja tarefas com horário e mantém o progresso de estudos e metas em um único lugar.
+- Controle de produtos, estoque, categorias e movimentações.
+- Operação de caixa, vendas, cancelamentos, clientes e formas de pagamento.
+- Gestão financeira, contas a receber, relatórios e indicadores.
+- Controle de colaboradores, empresas e permissões de acesso.
+- Integrações de pagamento, WhatsApp, emissão fiscal e serviços externos quando configuradas.
+- Loja virtual com catálogo controlado pela configuração da empresa.
+- Programa de pontos, cupons, prêmios e roleta promocional.
 
-## Principais recursos
-
-- Cadastro e acesso por e-mail com PIN numérico de quatro dígitos.
-- Rotinas de manhã, tarde e noite, com ordenação e conclusão diária.
-- Planejamento com horários, lembretes e notificações push.
-- Pomodoro configurável, timer, cronômetro e modo de tela cheia.
-- Registro de sessões de foco e acompanhamento semanal.
-- Área de estudos com matérias, assuntos e progresso.
-- Metas de futuro, check-in diário, planejamento semanal e desafios em comunidade.
-- Instalação como PWA, com layout adaptado a celulares e tablets em qualquer orientação.
-
-## Arquitetura
+## Estrutura do projeto
 
 ```text
-cave/
-├── frontend/             # Interface, PWA e adaptadores HTTP do Next.js
-│   ├── app/
-│   └── public/
-├── backend/              # Regras de negócio, banco e notificações
-│   └── src/
-│       ├── lib/
-│       └── routes/
+Saude e vida/
+├── frontend/                  # Next.js, React, TypeScript e telas do sistema
+│   ├── app/(main)/             # Área autenticada e gestão interna
+│   ├── app/loja/               # Páginas públicas da loja virtual
+│   └── public/                 # Imagens e arquivos públicos
+├── backend/                   # API, regras de negócio, autenticação e integrações
+│   ├── src/controllers/        # Controladores HTTP
+│   ├── src/routes/             # Rotas da API
+│   ├── src/services/           # Regras de negócio
+│   ├── src/models/             # Modelos do banco
+│   └── migrations/             # Evolução do schema do PostgreSQL
+├── docs/lojinha-virtual/       # Documentação específica da loja
+└── docs/roleta/               # Documentação específica da roleta e pontos
 ```
 
-Os arquivos em `frontend/app/api` são adaptadores pequenos. A implementação das rotas fica em `backend/src/routes`, o que mantém a divisão entre interface e domínio sem mudar as URLs já usadas pelo aplicativo.
+## Lojinha virtual
 
-## Tecnologias
+A loja não publica automaticamente todo o estoque. Um produto precisa ser adicionado à configuração da lojinha, receber uma categoria da loja e ser marcado como **Na loja**. O vínculo com o produto do estoque é mantido pelo ID original.
 
-- Next.js, React e TypeScript
-- PostgreSQL hospedado no Neon
-- Web Push com VAPID e agendamento via QStash
-- PWA com service worker e manifesto para instalação
+A loja contempla:
 
-## Como executar
+- catálogo, categorias próprias, fotos e nome público personalizado;
+- produtos por unidade e produtos a granel;
+- carrinho, checkout, retirada na loja e entrega regional;
+- Pix e cartão via Mercado Pago;
+- cupons de primeira compra e cupons vinculados a clientes;
+- pedidos com atualização de status e notificações;
+- integração de pontos entre compras online e vendas do caixa.
+
+Veja a documentação em [`docs/lojinha-virtual/README.md`](docs/lojinha-virtual/README.md).
+
+## Roleta e programa de pontos
+
+A roleta cadastra participantes, permite configurar prêmios e gera um código individual para uso na loja. O sistema também acumula pontos por compras vinculadas ao cliente, tanto no caixa quanto na loja online.
+
+Veja a documentação em [`docs/roleta/README.md`](docs/roleta/README.md).
+
+## Como executar localmente
+
+1. Instale Node.js compatível com os arquivos `package.json`.
+2. Configure as variáveis de ambiente a partir dos arquivos `.env.example`, quando disponíveis.
+3. Instale as dependências:
+
+   ```bash
+   npm install --prefix frontend
+   npm install --prefix backend
+   ```
+
+4. Execute as migrações no backend:
+
+   ```bash
+   cd backend
+   npx sequelize-cli db:migrate
+   ```
+
+5. Inicie frontend e backend pelos scripts definidos em cada `package.json`.
+
+Nunca publique arquivos `.env`, tokens, chaves privadas ou credenciais. Os arquivos de ambiente locais estão protegidos pelo `.gitignore`.
+
+## Build
 
 ```bash
-cp .env.example frontend/.env.local
-npm install --prefix frontend
-npm run dev
+npm run build --prefix frontend
 ```
 
-Abra `http://localhost:3000`. Para habilitar banco e notificações, preencha as variáveis de `frontend/.env.local` com credenciais próprias. Nunca publique arquivos `.env` ou chaves privadas.
-
-## Comandos úteis
-
-```bash
-npm run build  # valida o build de produção
-```
-
-## Organização para recrutadores
-
-Este repositório foi organizado para deixar claras as responsabilidades do projeto: a camada de interface está em `frontend`, enquanto persistência, autenticação, domínio e notificações estão em `backend`. O código foi escrito em TypeScript e inclui fluxos reais de produto, como autenticação por PIN, sincronização de dados e suporte a notificações.
+O deploy da aplicação é dividido entre a interface Next.js e a API Node/Express. As variáveis de ambiente de produção devem ser configuradas no provedor de hospedagem.
