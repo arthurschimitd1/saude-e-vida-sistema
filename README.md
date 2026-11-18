@@ -26,8 +26,7 @@ Saude e vida/
 │   ├── src/services/           # Regras de negócio
 │   ├── src/models/             # Modelos do banco
 │   └── migrations/             # Evolução do schema do PostgreSQL
-├── docs/lojinha-virtual/       # Documentação específica da loja
-└── docs/roleta/               # Documentação específica da roleta e pontos
+└── README.md                  # Visão geral e instruções do projeto
 ```
 
 ## Lojinha virtual
@@ -44,13 +43,9 @@ A loja contempla:
 - pedidos com atualização de status e notificações;
 - integração de pontos entre compras online e vendas do caixa.
 
-Veja a documentação em [`docs/lojinha-virtual/README.md`](docs/lojinha-virtual/README.md).
-
 ## Roleta e programa de pontos
 
 A roleta cadastra participantes, permite configurar prêmios e gera um código individual para uso na loja. O sistema também acumula pontos por compras vinculadas ao cliente, tanto no caixa quanto na loja online.
-
-Veja a documentação em [`docs/roleta/README.md`](docs/roleta/README.md).
 
 ## Como executar localmente
 
