@@ -4,10 +4,6 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "test": "node --test test/*.test.js",
-    "test:producao-estoque": "node scripts/test-producao-estoque.js",
-    "test:estoque-completo": "node scripts/test-estoque-completo.js",
-    "test:caixa-sem-fiscal": "node scripts/test-caixa-sem-fiscal.js",
     "db:migrate": "npx sequelize-cli db:migrate",
     "db:migrate:undo": "npx sequelize-cli db:migrate:undo",
     "db:migrate:status": "npx sequelize-cli db:migrate:status",
